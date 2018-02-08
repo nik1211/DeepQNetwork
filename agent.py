@@ -293,9 +293,10 @@ class DQNAgent(object):
         :return: 起こす行動
         """
         # ランダムでの行動を調整する。学習が進むごとにランダムに振る舞う確率を下げる。
-        ep = test_ep or (self.ep_end +
-                         max(0., (self.ep_start - self.ep_end)
-                             * (self.ep_end_t - max(0., self.step - self.learn_start)) / self.ep_end_t))
+#        ep = test_ep or (self.ep_end +
+#                         max(0., (self.ep_start - self.ep_end)
+#                             * (self.ep_end_t - max(0., self.step - self.learn_start)) / self.ep_end_t))
+        ep = self.ep_end
 
         if random.random() < ep:
             # ランダムで行動する。
