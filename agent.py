@@ -54,8 +54,7 @@ class DQNAgent(object):
         self.env = environment
 
         # 最大のステップ数
-        self.done_step = 50300000    # これまでに計算した回数
-        self.max_step =  60000000 - self.done_step
+        self.max_step =  10000000
         # バッチサイズ
         self.batch_size = 32
 
