@@ -47,8 +47,7 @@ class History(object):
 
 
 class DQNAgent(object):
-    def __init__(self, environment=None, display=False
-                 ):
+    def __init__(self, environment=None, display=False):
         self.weight_dir = 'weights'
         self.sess = None
         self.env = environment
