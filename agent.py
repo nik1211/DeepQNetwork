@@ -76,7 +76,8 @@ class DQNAgent(object):
         self.history = History(self.history_length, self.screen_height, self.screen_width)
 
         # リプレイメモリへの保存数
-        memory_size = 1000000
+        memory_size = 600000
+        #memory_size = 1000000
         # リプレイメモリの初期化
         self.memory = ReplayMemory("./model_dir", memory_size, self.batch_size, self.screen_height,
                                    self.screen_width,
