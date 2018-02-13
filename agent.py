@@ -55,7 +55,7 @@ class DQNAgent(object):
         # 最大のステップ数
         self.max_step =  10000000
         # バッチサイズ
-        self.batch_size = 8
+        self.batch_size = 16
 
         # εにより調整する値
         self.ep_end = 0.01
@@ -76,8 +76,7 @@ class DQNAgent(object):
         self.history = History(self.history_length, self.screen_height, self.screen_width)
 
         # リプレイメモリへの保存数
-        memory_size = 600000
-        #memory_size = 1000000
+        memory_size = 1000000
         # リプレイメモリの初期化
         self.memory = ReplayMemory("./model_dir", memory_size, self.batch_size, self.screen_height,
                                    self.screen_width,
